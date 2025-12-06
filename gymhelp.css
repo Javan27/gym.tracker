@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(135deg, #dce9ff, #f5f8ff);
+    color: #1e2a38;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+    color: #2a4b8d;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Sections */
+section {
+    margin-top: 25px;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid #3d6db5;
+    animation: fade 0.8s ease;
+}
+
+/* Reusable card */
+.card {
+    padding: 12px;
+    border-radius: 8px;
+    background: #f9fbff;
+    border: 1px solid #d4e1ff;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: #3d6db5;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #e3e8f0;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f2f6ff;
+}
+
+/* Form flex layout */
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #9bb2d4;
+    background: #ffffff;
+}
+
+/* Buttons */
+button {
+    background: #3d6db5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    background: #2f5aa0;
+}
+
+/* Fade-in */
+.fade-in {
+    animation: fade 1.2s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive form */
+@media(max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+}

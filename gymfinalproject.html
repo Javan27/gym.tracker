@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Workout Tracker</title>
+    <link rel="stylesheet" href="gymhelp.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gym Workout Tracker</h1>
+        <p class="fade-in">Track your workouts and stay consistent.</p>
+    </header>
+
+    <!-- List of Muscle Groups -->
+    <section>
+        <h2>Muscle Groups</h2>
+        <ul id="muscleList">
+            <li>Chest</li>
+            <li>Back</li>
+            <li>Legs</li>
+            <li>Shoulders</li>
+            <li>Arms</li>
+        </ul>
+    </section>
+
+    <!-- Workout Form -->
+    <section>
+        <h2>Add Workout</h2>
+        <form id="workoutForm">
+            <input type="text" id="exercise" placeholder="Exercise Name" required>
+            <input type="number" id="sets" placeholder="Sets" required>
+            <input type="number" id="reps" placeholder="Reps" required>
+            <input type="number" id="weight" placeholder="Weight (lbs)" required>
+
+            <select id="muscleGroup" required>
+                <option value="">Select Muscle Group</option>
+                <option value="Chest">Chest</option>
+                <option value="Back">Back</option>
+                <option value="Legs">Legs</option>
+                <option value="Shoulders">Shoulders</option>
+                <option value="Arms">Arms</option>
+            </select>
+
+            <button type="submit">Add Workout</button>
+        </form>
+
+        <p id="formError" class="error"></p>
+    </section>
+
+    <!-- Table -->
+    <section>
+        <h2>Your Workouts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Weight</th>
+                    <th>Muscle Group</th>
+                </tr>
+            </thead>
+            <tbody id="workoutTable"></tbody>
+        </table>
+    </section>
+
+    <!-- Fetched Data -->
+    <section>
+        <h2>Motivation</h2>
+        <button id="loadTips">Load Daily Tip</button>
+        <p id="tipText" class="fade-in"></p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
